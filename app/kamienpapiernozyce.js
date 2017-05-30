@@ -1,4 +1,15 @@
 
+//ktos to odjebie
+if(typeof(wyborGracza1) != "number" || typeof(wyborGracza2) != "number") {
+    return false;
+}
+
+if(!(wyborGracza1 in mozliwosci) || !(wyborGracza2 in mozliwosci)) {
+    return false;
+}
+
+
+//ktos to odjebie
 switch(wyborGracza1) {
     case kamien:
         switch(wyborGracza1) {
