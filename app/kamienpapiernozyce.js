@@ -4,22 +4,20 @@
 
 var mozliwosci = ["kamien", "papier", "nozyce"];
 
-
-
 function kamienPapierNozyce(wyborGracza1, wyborGracza2) {
 
     if(typeof(wyborGracza1) != "string" || typeof(wyborGracza2) != "string") {
         return false;
     }
 
-    if(!(wyborGracza1 in mozliwosci) || !(wyborGracza2 in mozliwosci)) {
+    if(!(mozliwosci.indexOf(wyborGracza1) > -1) || !(mozliwosci.indexOf(wyborGracza2) > -1)) {
         return false;
     }
 
 
     switch(wyborGracza1) {
         case "kamien":
-            switch(wyborGracza1) {
+            switch(wyborGracza2) {
                 case "kamien":
                     return "remis"
                     break;
@@ -32,7 +30,7 @@ function kamienPapierNozyce(wyborGracza1, wyborGracza2) {
             }
             break;
         case "papier":
-            switch(wyborGracza1) {
+            switch(wyborGracza2) {
                 case "kamien":
                     return "gracz1"
                     break;
@@ -45,7 +43,7 @@ function kamienPapierNozyce(wyborGracza1, wyborGracza2) {
             }
             break;
         case "nozyce":
-            switch(wyborGracza1) {
+            switch(wyborGracza2) {
                 case "kamien":
                     return "gracz2"
                     break;
@@ -60,3 +58,7 @@ function kamienPapierNozyce(wyborGracza1, wyborGracza2) {
     }
 
 }
+
+module.exports = {
+    kamienPapierNozyce: kamienPapierNozyce
+};
