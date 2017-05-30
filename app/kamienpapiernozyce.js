@@ -4,6 +4,8 @@
 
 var mozliwosci = ["kamien", "papier", "nozyce"];
 
+
+
 function kamienPapierNozyce(wyborGracza1, wyborGracza2) {
 
     if(typeof(wyborGracza1) != "string" || typeof(wyborGracza2) != "string") {
@@ -16,41 +18,41 @@ function kamienPapierNozyce(wyborGracza1, wyborGracza2) {
 
 
     switch(wyborGracza1) {
-        case kamien:
+        case "kamien":
             switch(wyborGracza1) {
-                case kamien:
+                case "kamien":
                     return "remis"
                     break;
-                case papier:
+                case "papier":
                     return "gracz2"
                     break;
-                case nozyce:
+                case "nozyce":
                     return "gracz1"
                     break;
             }
             break;
-        case papier:
+        case "papier":
             switch(wyborGracza1) {
-                case kamien:
+                case "kamien":
                     return "gracz1"
                     break;
-                case papier:
+                case "papier":
                     return "remis"
                     break;
-                case nozyce:
+                case "nozyce":
                     return "gracz2"
                     break;
             }
             break;
-        case nozyce:
+        case "nozyce":
             switch(wyborGracza1) {
-                case kamien:
+                case "kamien":
                     return "gracz2"
                     break;
-                case papier:
+                case "papier":
                     return "gracz1"
                     break;
-                case nozyce:
+                case "nozyce":
                     return "remis"
                     break;
             }
