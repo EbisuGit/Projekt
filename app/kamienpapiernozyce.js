@@ -6,6 +6,15 @@ var mozliwosci = ["kamien", "papier", "nozyce"];
 
 function kamienPapierNozyce(wyborGracza1, wyborGracza2) {
 
+    if(typeof(wyborGracza1) != "string" || typeof(wyborGracza2) != "string") {
+        return false;
+    }
+
+    if(!(wyborGracza1 in mozliwosci) || !(wyborGracza2 in mozliwosci)) {
+        return false;
+    }
+
+
     switch(wyborGracza1) {
         case kamien:
             switch(wyborGracza1) {
