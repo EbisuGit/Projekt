@@ -1,0 +1,41 @@
+> stryker run stryker.conf.js
+
+[2017-05-31 11:45:30.816] [INFO] InputFileResolver - Found 1 of 2 file(s) to be mutated.
+[2017-05-31 11:45:30.821] [INFO] SandboxCoordinator - Starting initial test run. This may take a while.
+[2017-05-31 11:45:31.527] [INFO] Stryker - Initial test run succeeded. Ran 15 tests in 0 seconds.
+[2017-05-31 11:45:31.558] [INFO] Stryker - 18 Mutant(s) generated
+[2017-05-31 11:45:31.570] [INFO] SandboxCoordinator - Creating 2 test runners (based on CPU count)
+Mutation testing  [=====] 100% (ETC 0.0s)[16 killed] [2 survived] [0 no coverage] [0 timeout] [0 error]
+
+Mutant survived!
+/home/student/Desktop/HW/Projekt/app/kamienpapiernozyce.js: line 9:7
+Mutator: RemoveConditionals
+-       if(typeof(wyborGracza1) != "string")
++       if(false)
+
+Tests ran:
+    unit tests outcomes should return remis
+    unit tests outcomes should return gracz2
+    unit tests outcomes should return gracz1
+  and 12 more tests!
+
+Mutant survived!
+/home/student/Desktop/HW/Projekt/app/kamienpapiernozyce.js: line 12:7
+Mutator: RemoveConditionals
+-       if(typeof(wyborGracza2) != "string")
++       if(false)
+
+Tests ran:
+    unit tests outcomes should return remis
+    unit tests outcomes should return gracz2
+    unit tests outcomes should return gracz1
+  and 10 more tests!
+
+18 total mutants.
+2 mutants survived.
+0 mutants timed out.
+16 mutants killed.
+Ran 4.67 tests per mutant on average.
+Mutation score based on covered code: 88.89%
+Mutation score based on all code: 88.89%
+[2017-05-31 11:45:32.678] [INFO] Stryker - Done in 1 second.

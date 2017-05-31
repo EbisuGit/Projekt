@@ -6,13 +6,17 @@ var mozliwosci = ["kamien", "papier", "nozyce"];
 
 function kamienPapierNozyce(wyborGracza1, wyborGracza2) {
 
-    if(typeof(wyborGracza1) != "string" || typeof(wyborGracza2) != "string") {
+    if(typeof(wyborGracza1) != "string")
         return false;
-    }
 
-    if(!(mozliwosci.indexOf(wyborGracza1) > -1) || !(mozliwosci.indexOf(wyborGracza2) > -1)) {
+    if(typeof(wyborGracza2) != "string")
         return false;
-    }
+
+    if(!(mozliwosci.indexOf(wyborGracza1) > -1))
+        return false
+
+    if(!(mozliwosci.indexOf(wyborGracza2) > -1))
+        return false;
 
 
     switch(wyborGracza1) {
