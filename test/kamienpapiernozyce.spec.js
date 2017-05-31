@@ -53,10 +53,16 @@ describe('unit tests', function()
             expect(app.kamienPapierNozyce("kamien", 3.14)).to.eql(false);
         })
         it('it should return false', function() {
+            expect(app.kamienPapierNozyce(42, 34)).to.eql(false);
+        })
+        it('it should return false', function() {
             expect(app.kamienPapierNozyce("lol", "lmao")).to.eql(false);
         })
         it('it should return false', function() {
             expect(app.kamienPapierNozyce("kamien", "rotfl")).to.eql(false);
+        })
+        it('it should return false', function() {
+            expect(app.kamienPapierNozyce("kamiendsf", "nozyce")).to.eql(false);
         })
     })
 })
