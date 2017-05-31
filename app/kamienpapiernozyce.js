@@ -14,11 +14,11 @@ function kamienPapierNozyce(wyborGracza1, wyborGracza2) {
 		    return false;
     }
 
-    if((mozliwosci.indexOf(wyborGracza1) > -1) === true) {
+    if((mozliwosci.indexOf(wyborGracza1) > -1) !== true) {
         return false;
     }
 
-    if((mozliwosci.indexOf(wyborGracza2) > -1) === true) {
+    if((mozliwosci.indexOf(wyborGracza2) > -1) !== true) {
         return false;
     }
 
@@ -27,41 +27,38 @@ function kamienPapierNozyce(wyborGracza1, wyborGracza2) {
             switch(wyborGracza2) {
                 case 'kamien':
                     return 'remis';
-                    break;
                 case 'papier':
                     return 'gracz2';
-                    break;
                 case 'nozyce':
                     return 'gracz1';
-                    break;
             }
-            break;
+
         case 'papier':
             switch(wyborGracza2) {
                 case 'kamien':
                     return 'gracz1';
-                    break;
+
                 case 'papier':
                     return 'remis';
-                    break;
+
                 case 'nozyce':
                     return 'gracz2';
-                    break;
+
             }
-            break;
+
         case 'nozyce':
             switch(wyborGracza2) {
                 case 'kamien':
                     return 'gracz2';
-                    break;
+
                 case 'papier':
                     return 'gracz1';
-                    break;
+
                 case 'nozyce':
                     return 'remis';
-                    break;
+
             }
-            break;
+
     }
 
 }
